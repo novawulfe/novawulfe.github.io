@@ -9,16 +9,20 @@
 
   <!-- Custom script -->
   <script>
-    // Sticky menu script   
+    var hasScrolled = false; 
+
     $(window).scroll(function() {
 
-      var headerHeight = $('header').outerHeight();
-
-      if($(window).scrollTop() >= headerHeight){
-        $('.menu').addClass('sticky');
+      if ($(window).scrollTop() > 260 ) {
+        hasScrolled = true;
+      } else {
+        hasScrolled = false; 
       }
-      else {
-        $('.menu').removeClass('sticky');  
+
+      if(hasScrolled){
+        $('.menu').addClass('sticky');
+      } else {
+        $('.menu').removeClass('sticky');
       }
 
     });
@@ -33,7 +37,7 @@
 
   <p>This site will document all the various attempts I make to hit max level with every class on official classic hardcore WoW</p>
   <p>I will also be posting links to my latest/succesful runs or my live streams, as well as other info like builds I am using to level etc.</p>
-  <nav class="menu sticky">
+  <nav class="menu">
     <a href="#progress">Progress</a>
     <a href="#video">Videos</a> 
     <a href="#talents">Talents</a>
