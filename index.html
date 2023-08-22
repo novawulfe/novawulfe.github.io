@@ -3,25 +3,46 @@
 
 <head>
   <title>WoW Hardcore Progress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom script -->
+  <script>
+    // Sticky menu script   
+    $(window).scroll(function() {
+
+      var headerHeight = $('header').outerHeight();
+
+      if($(window).scrollTop() >= headerHeight){
+        $('.menu').addClass('sticky');
+      }
+      else {
+        $('.menu').removeClass('sticky');  
+      }
+
+    });
+  </script>
 </head>
 
 <body>
 
   <header>
-    <img src="wow-hc.png" alt="WoW Hardcore Icon">
-    <h1>WoW Hardcore Progress</h1>
-    <p>This site will document all the various attempts I make to hit max level with every class on official classic hardcore WoW</p>
-    <p>I will also be posting links to my latest/succesful runs or my live streams, as well as other info like builds I am using to level etc.</p>
-    <nav>
-      <a href="#progress">Progress</a> <a href="#video">Videos / Live Stream</a> <a href="#talents">Talents</a>
-    </nav>
-  </header>
 
-  
+  <img src="wow-hc.png" alt="WoW Hardcore Icon" style="margin-bottom:-15px;">
+
+  <p>This site will document all the various attempts I make to hit max level with every class on official classic hardcore WoW</p>
+  <p>I will also be posting links to my latest/succesful runs or my live streams, as well as other info like builds I am using to level etc.</p>
+  <nav class="menu sticky">
+    <a href="#progress">Progress</a>
+    <a href="#video">Videos</a> 
+    <a href="#talents">Talents</a>
+  </nav>
+
+</header>
 
   <div id="progress" class="section">
-    <table>
+    <table class="desktop-table">
       <thead>
         <tr>
           <th>Name</th>
@@ -52,7 +73,7 @@
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
-                <tr>
+        <tr>
           <td>NovaSham</td>
           <td>Shaman</td>
           <td>Enhancement</td>
@@ -74,7 +95,7 @@
           <td>NovaHunter</td>
           <td>Hunter</td>
           <td>Beast Mastery</td>
-          <td>UDwarf</td>
+          <td>Dwarf</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
@@ -117,12 +138,75 @@
         </tr>
       </tbody>
     </table>
+    <table class="desktop-mob">
+      <thead>
+        <tr>
+          <th>Name</td>
+          <th>Class</td>
+          <th>Level</td>
+          <th>Status</td>
+        </tr>
+        <tr>
+          <td>Novapriest</td>
+          <td>Priest</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaMage</td>
+          <td>Mage</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaSham</td>
+          <td>Shaman</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaDruid</td>
+          <td>Druid</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaHunter</td>
+          <td>Hunter</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaPala</td>
+          <td>Paladin</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaRogue</td>
+          <td>Rogue</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaLock</td>
+          <td>Warlock</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+        <tr>
+          <td>NovaWar</td>
+          <td>Warrior</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+        </tr>
+      </thead>
+    </table>
   </div>
 
   <div class="video-section">
     <div id="video-container">
-      <h1>Videos & Live Stream</h1>
-      <!-- <iframe id="video" src="" frameborder="0" allowfullscreen></iframe> -->
+      <h1>Videos</h1>
       <h3>COMING SOON</h3>
     </div>
   </div>
@@ -130,6 +214,7 @@
   <div id="talents" class="section">
     <h1>Talents</h1>
     <h3>Coming Soon</h3>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 
 

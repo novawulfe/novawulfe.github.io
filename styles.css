@@ -1,7 +1,3 @@
-header {
-  position: sticky;
-  top: 0;
-}
 
 
 body {
@@ -205,9 +201,33 @@ td.alive{
   background:green;
 }
 
+.desktop-mob {display:none;}
+
+.menu.sticky {
+  width: 100%;
+  display: flex; 
+  position: fixed;
+  top: 0;
+}
+
+.menu.sticky a {
+  width: auto; 
+  flex: 1;
+}
+
+.desktop-table{
+  margin: 0 auto;
+}
+
+.desktop-mob{
+  margin: 0 auto;
+}
+
 @media(max-width:768px){
   nav a:nth-child(2) {
   border-right:none;
   border-left:none;
 }
+  .desktop-table{display:none;}
+  .desktop-mob{display:block;margin-left:auto;margin-right:auto;}
 }
