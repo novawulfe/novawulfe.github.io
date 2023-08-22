@@ -1,149 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Livewire's Gritty Survivor Challenge</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<header>
-		<h1>Livewire's Gritty Survivor Challenge For WoW</h1>
-	</header>
-	
-	<main>
-		<div class="retail">
-			<h1 class="accordion">+ Retail Rules & Randomizer</h1>
-			<div class="accordion-container">
-			<h2 id="ruleset">Gritty Survivor Challenge Rules</h2>
-			<ol>
-				<li><span>Hardcore Leveling:</span> If your character dies, delete it and start over. This also means no soulstone, no self reviving, if you die, you die.</li>
-				<li><span>Dropped and Vendor Gear Only:</span> Use only gear that drops from mobs or can be bought from vendors. No crafting, trading, using the AH OR gear from quests. This is designed to make your playthrough more random and difficult as quest gear in retail is thrown at you and scales.</li>
-				<li><span>Self-found Items Only:</span> No trading or auction house usage. All items and resources must be obtained by your character alone.</li>
-				<li><span>Limited Addons:</span> Use only a select few addons that don't significantly impact gameplay. For acceptable addons see the Addon Rules</li>
-				<li><span>No Combat or Leveling Addons:</span> Refrain from using addons that assist with combat, rotations, or provide detailed leveling guides.</li>
-				<li><span>No Heirlooms:</span> No heirloom gear, no using toys or other items that you have no obtained on that character that could effect leveling and gameplay.</li>
-				<li><span>No Flight Paths:</span> Rely solely on walking, running, or ground mounts for travel. This encourages exploration and immersion in the game world.</li>
-				<li><span>No Flying mounts:</span> With the exception of completly inaccessible places (such as returning to Dalaran without flight paths and hearthstone). You may not use flying mounts. Find another way to your destination where possible and only use them as the very last resort if there is no alternative.</li>
-				<li><span>No Hearthstone:</span> Avoid using a Hearthstone for the entirety of your leveling experience. Rely on manual travel to return to cities or inns. This includes the "Stuck" feature, unless you really do get stuck somewhere.</li>
-				<li><span>Limited Rested Experience:</span> Only log out in the wilderness, not in cities or inns. This will prevent you from accumulating rested experience, making leveling slower and more challenging.</li>
-				<li><span>Profession Limitation:</span> The only professions allowed in this challenge are mining and herbalism, for XP and Gold. However you can still only see these materials to vendors not on the AH.</li>
-				<li><span>Consumables and Potions:</span> You can only use consumables and potions that you acquire through gameplay. No purchasing or trading for them with other players. If a vendor sells consumables/potions that is fine.</li>
-				<li><span>No Dungeon or Raid Gear:</span> You cannot obtain gear from dungeons or raids. This forces you to rely on the gear that drops from mobs or can be bought from vendors.</li>
-				<li><span>No Grouping, Boosting or Accepting Help:</span> This means no joining quests for groups, no willingly accepting help on quests (if someone starts killing your mobs without your request that is fine). No accepting buffs or boosts, try to play 100% solo.</li>
-			</ol>
 
-			<h2 id="class-ruleset" class="accordion">+ Optional Class-Specific Limitations</h2>
-			<div class="panel">
-				<p>These are optional class specific rules you could add to your run to make things more interesting and even more difficult.</p>
-				<ul>
-					<li><span>Paladin:</span> No use of bubbles, such as Divine Shield, no lay on hands.</li>
-					<li><span>Hunter:</span> If your pet dies, you can never use that pet species again and must tame a new one. For example, if your cat pet dies, you must find a different type of pet to tame. Pets run hardcore mode too! (Specifically for retail I have locked out species as you don't need to worry about happiness like classic so it would be too easy to just tame a new pet again of the same type)</li>
-					<li><span>Warlock:</span> If your demon dies, you can never resummon that specific demon type again. For example, if your Imp dies, you must rely on other demon types for the remainder of your playthrough. You may enslave demons for temporary pets etc.</li>
-					<li><span>Mage:</span> No use of portals or teleports. Additionally, you cannot summon your own food or water. You must rely on what drops or can be purchased from vendors. However, mana gems are allowed and can be used for mana regeneration.</li>
-					<li><span>Druid:</span> Only allowed to use forms for combat. When not in a form, you cannot cast spells and can only use melee attacks. The only exception is the ability to swap between forms.</li>
-					<li><span>Warrior:</span> Only allowed to use the stance associated with their spec and only abilities usable in that stance. For example, if you're a Protection Warrior, you can only use Defensive Stance and abilities that can be used in that stance.</li>
-					<li><span>Rogue:</span> Only allowed to have one major cooldown active at once. For example, if you use Vanish, you cannot use Blind or Evasion until Vanish's cooldown is up. For extra difficulty you can avoid using poisons.</li>
-					<li><span>Demonhunter:</span> You may only level by hunting demons and demon-like creatures. This is possible by picking specific expansions and zones that contain demons (thanks to scaling leveling).</li>
-					<li><span>Death Knight: No summoning pets, this includes army of the dead, gargoyles, ghouls and dancing rune weapon. You may also not use any kind of aoe shield such as anti-magic zone.</span> </li>
-					<li><span>Evoker:</span> Devastation evokers may not use green dragonflight abilities, only red, blue and bronze. Preservation bokers may not use red dragnflight abilities only green, blue and bronze</li>
-					<li><span>Monk:</span> No weapons allowed, even fist weapons, a true monk uses his own body as the weapon! This additionally means no casting damaging spells such as crackling jade lightning. (Heals are fine).</li>
-					<li><span>Shaman:</span> Pick 2 out of the 4 elements, you may only use spells from these elemental schools. Eg. Water + Earth, means you cannot use flameshock or airtotems. </li>
-					<li><span>Priest:</span> Only allowed to use abilities of light or dark depending on spec. Eg. A shadowpriest can't use heals or shields. A holy priest can't use shadow word pain or psychic scream.</li>
-				</ul>
-			</div>
-			<h2 id="randomizer">Randomizer</h2>
-			<p>If you want to add some randomisation to your runs you can click this button and you will be given a random faction, race, class and spec to attempt the challenge with. Good luck and only press it once, otherwise it's cheating!</p>
-			<p>If you get a combination you cannot do such as not having unlocked a race, or not having a level 50 on realm for Dracthyr, just reroll!</p>
-			<button id="randomizer-button">Randomize Me!</button>
-			<div class="output-container">
-			<div id="random-faction" class="output-box hidden"></div>
-	  		<div id="random-race" class="output-box hidden"></div>
-	  		<div id="random-class" class="output-box hidden"></div>
-	  		<div id="random-spec" class="output-box hidden"></div>
-			</div>
-		</div>
-		</div>
-		<div class="classic">
-			<h1 class="accordion">+ Classic Rules & Randomizer</h1>
-			<div class="accordion-container">
-			<h2 id="ruleset">Gritty Survivor Challenge Rules</h2>
-			<ol>
-				<li><span>Hardcore Leveling:</span> If your character dies, delete it and start over. This also means no soulstone, no self reviving, if you die, you die.</li>
-				<li><span>Dropped, Quest and Vendor Gear Only:</span> Use only gear that drops from mobs, quests or can be bought from vendors. No crafting, trading, using the AH.</li>
-				<li><span>Self-found Items Only:</span> No trading or auction house usage. All items and resources must be obtained by your character alone.</li>
-				<li><span>Limited Addons:</span> Use only a select few addons that don't significantly impact gameplay. For acceptable addons see the Addon Rules</li>
-				<li><span>No Combat or Leveling Addons:</span> Refrain from using addons that assist with combat, rotations, or provide detailed leveling guides.</li>
-				<li><span>No Heirlooms:</span> No heirloom gear, no using toys or other items that you have no obtained on that character that could effect leveling and gameplay.</li>
-				<li><span>No Flight Paths:</span> Rely solely on walking, running, or ground mounts for travel. This encourages exploration and immersion in the game world.</li>
-				<li><span>No Flying mounts:</span> With the exception of completly inaccessible places (such as returning to Dalaran without flight paths and hearthstone). You may not use flying mounts. Find another way to your destination where possible and only use them as the very last resort if there is no alternative.</li>
-				<li><span>No Hearthstone:</span> Avoid using a Hearthstone for the entirety of your leveling experience. Rely on manual travel to return to cities or inns. This includes the "Stuck" feature, unless you really do get stuck somewhere.</li>
-				<li><span>Limited Rested Experience:</span> Only log out in the wilderness, not in cities or inns. This will prevent you from accumulating rested experience, making leveling slower and more challenging.</li>
-				<li><span>Professions Allowed:</span> All professions are allowed, as long as you source all the materials for crafting items yourself, no trading, no AH etc.</li>
-				<li><span>Consumables and Potions:</span> You can only use consumables and potions that you acquire through gameplay or crafting. No purchasing or trading for them with other players. If a vendor sells consumables/potions that is fine.</li>
-				<li><span>No Dungeon or Raid Gear:</span> You cannot obtain gear from dungeons or raids. This forces you to rely on the gear that drops from mobs or can be bought from vendors.</li>
-				<li><span>No Grouping, Boosting or Accepting Help:</span> This means no joining quests for groups, no willingly accepting help on quests (if someone starts killing your mobs without your request that is fine). No accepting buffs or boosts, try to play 100% solo.</li>
-			</ol>
-			<h2 id="class-ruleset" class="accordion">+ Optional Class-Specific Limitations</h2>
-			<div class="panel">
-				<p>These are optional class specific rules you could add to your run to make things more interesting and even more difficult.</p>
-				<ul>
-					<li><span>Paladin:</span> No use of bubbles, no lay on hands.</li>
-					<li><span>Hunter:</span> If your pet dies, you can never use that pet again and must tame a new one. Pets run hardcore mode too!</li>
-					<li><span>Warlock:</span> If your demon dies, you can never resummon that specific demon type again. For example, if your Imp dies, you must rely on other demon types for the remainder of your playthrough. You may enslave demons for temporary pets etc.</li>
-					<li><span>Mage:</span> No use of portals or teleports. Additionally, you cannot summon your own food or water. You must rely on what drops or can be purchased from vendors. However, mana gems are allowed and can be used for mana regeneration.</li>
-					<li><span>Druid:</span> Only allowed to use forms for combat. When not in a form, you cannot cast spells and can only use melee attacks. The only exception is the ability to swap between forms.</li>
-					<li><span>Warrior:</span> Only allowed to use the stance associated with their spec and only abilities usable in that stance. For example, if you're a Protection Warrior, you can only use Defensive Stance and abilities that can be used in that stance. If you do not have access to a stance, then use Battle stance until you do, but still avoid using spells outside that stances access. (If it says usable in beserker and arms stance etc. that can be used by either)</li>
-					<li><span>Rogue:</span> Only allowed to have one major cooldown active at once. For example, if you use Vanish, you cannot use Blind or Evasion until Vanish's cooldown is up. For extra difficulty you can avoid using poisons.</li>
-					<li><span>Death Knight: No summoning pets, this includes army of the dead, gargoyles, ghouls and dancing rune weapon. You may also not use any kind of aoe shield such as anti-magic zone.</span> </li>
-					<li><span>Shaman:</span> Pick 2 out of the 4 elements, you may only use spells from these elemental schools. Eg. Water + Earth, means you cannot use flameshock or airtotems. </li>
-					<li><span>Priest:</span> Only allowed to use abilities of light or dark depending on spec. Eg. A shadowpriest can't use heals or shields. A holy priest can't use shadow word pain or psychic scream etc.</li>
-				</ul>
-			</div>
-			<h2 id="randomizer">Randomizer</h2>
-			<p>If you want to add some randomisation to your runs you can click this button and you will be given a random faction, race, class and spec to attempt the challenge with. Good luck and only press it once, otherwise it's cheating!</p>
-			<p>If you get a combination you cannot do such as not having unlocked a race, or not having a level 50 on realm for Dracthyr, just reroll!</p>
-			<button id="randomizer-button-classic">Randomize Me!</button>
-			<div class="output-container-classic">
-			<div id="random-faction-classic" class="output-box hidden"></div>
-	  		<div id="random-race-classic" class="output-box hidden"></div>
-	  		<div id="random-class-classic" class="output-box hidden"></div>
-	  		<div id="random-spec-classic" class="output-box hidden"></div>
-			</div>
-			</div>
-			</div>
-			<div class="addons">
-				<h1 class="accordion">+ Addon Rules</h1>
-				<div class="accordion-container">
-				<p>This list only serves as a guide for addons, if you prefer to use a different addon with similar functionality that is fine, just try to avoid using anything too far from this lists functions.</p>
-				<h3>Approved Addons</h3>
-			<ul>
-					<li><span>Bag Addons:</span> Bagnon etc. are fine as long as all they do is group multiple bags into 1 display and/or filter and sort items in your bag.
-					</li>
-					<li><span>UI Addons:</span> MoveAnything, ElvUI etc. these addons are fine as long as they are specifically used for ui changes like moving where your character bar and target bar are, or moving your skill bars. Any additional features they have such as warning you of danger or death, showing information not available in the default ui etc. should be avoided.</li>
-					<li><span>DPS Meters:</span> Recount etc. any kind of dps meter is fine, as it will only provide you with ways you can manually try to boost dps by tweaking your gear/rotations yourself.</li>
-					<li><span>Trash Vendor Addons:</span> Scrap or any kind of auto junk selling addon is fine.</li>
-					<li><span>Roleplay Addons:</span> Immersion or camera addons that are purely for RP purposes are fine.</li>
-					<li><span>Nameplate Addons:</span> Nameplate addons that just make the ui look nicer and more readable are fine as long as they don't provide extra info than the default ones such as threat on targets.</li>
-					<li><span>Cast Bar Addons:</span> Similarly cast bar addons are fine as long as they are pure ui changes.</li>
-				</ul>
-				<h3>Banned Addons</h3>
-				<ul>
-					<li>RestedXP, Zygor, Dugi, any kind of leveling guide/path. You must either explore, or know what you are doing to level, researching a quest on wowhead etc. is ok as long as its all manually done by you.
-					</li>
-					<li>Questie, Any kind of addon that shows on the map/minimap the spawn locations of mobs or the location of items or quests, you must explore or research this yourself, most quest text tells you where to go.</li>
-					<li>Threat Meters of any kind are banned, this is especially important for pet using classes like hunter/warlock. You shouldnt rely on an addon to tell you when you are going to pull threat from your pet, just learn and adapt when you do pull!</li>
-					<li>Any kind of addon that compares stats between 2 pieces of gear and tells you which is better is banned, use your brain!</li>
-					<li>Any kind of map addon that reveals parts of the map you have not been too such as leatrix is obviously banned, you need to go explore yourself!</li>
-					<li>Addons that auto drop, or drop on click the "cheapest item" from your inventory are banned, you need to work this out and drop them manually.</li>
-					<li>Any kind of automation addon, such as auto equipping gear when mounting/dismounting.</li>
-					<li>Pet Battle Automation, pet finders etc. Anything that would automate battles with scripts, show you the location of trainers or pets to collect is banned as this would give you an advantage not built into the default game.</li>
-					<li>Rare Scanners, this would give you too much of an advantage and allow you to find and farm high quality gear that would boost your run, find them manually and kill them!</li>
-				</ul>
-			</div>
-		</div>
-	</main>
-<footer>
-		<script src="script.js"></script>
-	</footer>	
+<head>
+  <title>WoW Hardcore Progress</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="wow-hc.png" alt="WoW Hardcore Icon">
+    <h1>WoW Hardcore Progress</h1>
+    <p>This site will document all the various attempts I make to hit max level with every class on official classic hardcore WoW</p>
+    <p>I will also be posting links to my latest/succesful runs or my live streams, as well as other info like builds I am using to level etc.</p>
+    <nav>
+      <a href="#progress">Progress</a> <a href="#video">Videos / Live Stream</a> <a href="#talents">Talents</a>
+    </nav>
+  </header>
+
+  
+
+  <div id="progress" class="section">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Spec</th>
+          <th>Race</th>
+          <th>Level</th>
+          <th>Status</th>
+          <th>Time Played</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Novapriest</td>
+          <td>Priest</td>
+          <td>Shadow</td>
+          <td>Undead</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaMage</td>
+          <td>Mage</td>
+          <td>Frost</td>
+          <td>Gnome</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+                <tr>
+          <td>NovaSham</td>
+          <td>Shaman</td>
+          <td>Enhancement</td>
+          <td>Tauren</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaDruid</td>
+          <td>Druid</td>
+          <td>Feral</td>
+          <td>Night Elf</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaHunter</td>
+          <td>Hunter</td>
+          <td>Beast Mastery</td>
+          <td>UDwarf</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaPala</td>
+          <td>Paladin</td>
+          <td>Protection</td>
+          <td>Human</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaRogue</td>
+          <td>Rogue</td>
+          <td>Combat</td>
+          <td>Human</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaLock</td>
+          <td>Warlock</td>
+          <td>Demonology</td>
+          <td>Orc</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+        <tr>
+          <td>NovaWar</td>
+          <td>Warrior</td>
+          <td>Protection</td>
+          <td>Troll</td>
+          <td>1</td>
+          <td class="alive">Alive</td>
+          <td>0d 0h 0m</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="video-section">
+    <div id="video-container">
+      <h1>Videos & Live Stream</h1>
+      <!-- <iframe id="video" src="" frameborder="0" allowfullscreen></iframe> -->
+      <h3>COMING SOON</h3>
+    </div>
+  </div>
+
+  <div id="talents" class="section">
+    <h1>Talents</h1>
+    <h3>Coming Soon</h3>
+  </div>
+
+
 </body>
+
+<footer>
+
+  <div class="footer-left">
+    &copy; Novawulf
+  </div>
+
+  <div class="footer-center">
+    <img src="wow-hc.png" alt="WoW Hardcore Icon">
+  </div>
+
+  <div class="footer-right">
+    <a href="https://www.youtube.com/channel/UC02fzOH2g9g5dXZ0nFE2ymQ">
+      <img style="display:inline" src="youtube.png" alt="YouTube">
+    </a>
+  </div>
+
+</footer>
+
 </html>
