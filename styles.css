@@ -1,4 +1,7 @@
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -209,7 +212,9 @@ td.alive{
   position: fixed;
   top: 0;
 }
-
+.menu {
+  z-index:99;
+}
 .menu.sticky a {
   width: auto; 
   flex: 1;
@@ -230,4 +235,91 @@ td.alive{
 }
   .desktop-table{display:none;}
   .desktop-mob{display:block;margin-left:auto;margin-right:auto;}
+}
+
+
+.talent-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.talent-card {
+  flex: 1 0 30%;
+  margin: 10px;
+  padding: 20px;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1; 
+}
+.talent-card.priest{
+  background-image: url('priest.jpg');
+ }
+ .talent-card.druid{
+  background-image: url('druid.jpg');
+ }
+ .talent-card.shaman{
+  background-image: url('shaman.jpg');
+ }
+ .talent-card.hunter{
+  background-image: url('hunter.jpg');
+ }
+ .talent-card.rogue{
+  background-image: url('rogue.jpg');
+ }
+ .talent-card.mage{
+  background-image: url('mage.jpg');
+ }
+ .talent-card.paladin{
+  background-image: url('paladin.jpg');
+ }
+ .talent-card.warrior{
+  background-image: url('warrior.jpg');
+ }
+ .talent-card.warlock{
+  background-image: url('warlock.jpg');
+ }
+
+.talent-card h2, h5 {
+  color: #fff;
+}
+
+.talent-card p {
+  color: #ccc;
+}
+
+.talent-card strong{
+  color:#EA2AFF ;
+}
+
+.talent-card li {
+  color: white;
+}
+
+.talent-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7349B8;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.talent-card::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .talent-card {
+    flex: 1 0 100%;
+    margin:5px 0;
+  }
 }
