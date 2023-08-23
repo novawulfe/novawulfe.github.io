@@ -248,7 +248,7 @@ td.alive{
   margin: 10px;
   padding: 20px;
   background-size: cover;
-  border-radius: 5px;
+  background-position:center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   position: relative;
   z-index: 1; 
@@ -313,8 +313,40 @@ td.alive{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   z-index: -1;
+}
+
+#talents p {
+  color:white;
+  text-align:center;
+}
+.talent-card p {
+  text-align:left!important;
+}
+
+#tips{
+  padding:25px;
+  background:#59086b;
+  color:white;
+}
+#tips p, #tips h1 {
+  text-align:center;
+}
+#tips ul{
+  list-style-type:none;
+}
+
+#tips ul li{
+  margin-bottom:8px;
+  background:#3e084a;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  padding:15px;
+  border-radius:8px;
+}
+
+#tips ul li strong{
+  color:#EA2AFF ;
 }
 
 @media (max-width: 768px) {
