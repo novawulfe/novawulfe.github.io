@@ -212,6 +212,10 @@ td.dead {
   color:white;
   background:black;
 }
+td.dead a{
+  color:white;
+  text-decoration:underline;
+}
 td.alive{
   color:white;
   background:green;
