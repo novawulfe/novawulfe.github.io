@@ -132,26 +132,18 @@ footer {
   padding: 3px 25px;
 }
 
-.footer-left {
+.footer .col {
   align-items: center;
   justify-content: center;
 }
 
-.footer-right {
-  align-items: center;
-  justify-content: center;  
-}
 
-.footer-right img{
+img.utubeicon{
   max-height:50px;
 }
 
-.footer-center {
-  align-items: center;
-  justify-content: center;
-}
 
-.footer-center img{
+.footer .col img{
   max-height:150px;
 }
 
