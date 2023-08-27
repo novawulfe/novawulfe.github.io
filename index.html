@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 
   <!-- Custom script -->
   <script>
@@ -49,6 +51,83 @@
 
   
   <div id="progress" class="section">
+    <h1>Highest Levels Achieved</h1>
+    <table class="levels-table">
+      <thead>
+        <tr>
+          <th class="dr">Druid</th>
+          <th class="hu">Hunter</th>
+          <th class="ma">Mage</th>
+          <th class="pa">Paladin</th>
+          <th class="pr">Priest</th>
+          <th class="ro">Rogue</th>
+          <th class="sh">Shaman</th>
+          <th class="wa">Warlock</th>
+          <th class="war">Warrior</th>
+        </tr>
+        </thead>
+        <tr>
+          <td>20</td>
+          <td>1</td>
+          <td>12</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+    </table>
+      <div class="row" style="padding:0 10px;">
+        <div class="col" style="padding:0!important;">
+          <table class="levels-table-mob">
+              <tr>
+                <th class="dr">Druid</th>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th class="hu">Hunter</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th class="ma">Mage</th>
+                <td>12</td>
+              </tr>
+          </table>
+        </div>
+        <div class="col" style="padding:0!important;">
+          <table class="levels-table-mob">
+            <tr>
+              <th class="pa">Paladin</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th class="pr">Priest</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th class="ro">Rogue</th>
+                <td>1</td>
+              </tr>
+          </table>
+        </div>
+        <div class="col" style="padding:0!important;">
+          <table class="levels-table-mob">
+            <tr>
+              <th class="sh">Shaman</th>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th class="wa">Warlock</th>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th class="war">Warrior</th>
+              <td>1</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     <h1>Solo</h1>
     <table class="desktop-table">
       <thead>
@@ -64,94 +143,103 @@
       </thead>
       <tbody>
         <tr>
-          <td>Novapriest</td>
-          <td>Priest</td>
-          <td>Shadow</td>
+          <td class="pr">Novapriest</td>
+          <td class="pr">Priest</td>
+          <td class="pr">Shadow</td>
           <td class="horde">Undead</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaMage</td>
-          <td>Mage</td>
-          <td>Frost</td>
-          <td class="alliance">Gnome</td>
-          <td>10</td>
+          <td class="ma">NovaMage</td>
+          <td class="ma">Mage</td>
+          <td class="ma">Frost</td>
+          <td class="alliance">Human</td>
+          <td>0</td>
           <td class="alive">Alive</td>
-          <td>0d 2h 40m</td>
+          <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaSham</td>
-          <td>Shaman</td>
-          <td>Enhancement</td>
+          <td class="sh">NovaSham</td>
+          <td class="sh">Shaman</td>
+          <td class="sh">Enhancement</td>
           <td class="horde">Tauren</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaDruid</td>
-          <td>Druid</td>
-          <td>Feral</td>
+          <td class="dr">NovaDruid</td>
+          <td class="dr">Druid</td>
+          <td class="dr">Feral</td>
           <td class="alliance">Night Elf</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaHunter</td>
-          <td>Hunter</td>
-          <td>Beast Mastery</td>
+          <td class="hu">NovaHunter</td>
+          <td class="hu">Hunter</td>
+          <td class="hu">Beast Mastery</td>
           <td class="alliance">Dwarf</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaPala</td>
-          <td>Paladin</td>
-          <td>Protection</td>
+          <td class="pa">NovaPala</td>
+          <td class="pa">Paladin</td>
+          <td class="pa">Protection</td>
           <td class="alliance">Human</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaRogue</td>
-          <td>Rogue</td>
-          <td>Combat</td>
+          <td class="ro">NovaRogue</td>
+          <td class="ro">Rogue</td>
+          <td class="ro">Combat</td>
           <td class="alliance">Human</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaLock</td>
-          <td>Warlock</td>
-          <td>Demonology</td>
+          <td class="wa">NovaLock</td>
+          <td class="wa">Warlock</td>
+          <td class="wa">Demonology</td>
           <td class="horde">Orc</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaWar</td>
-          <td>Warrior</td>
-          <td>Protection</td>
+          <td class="war">NovaWar</td>
+          <td class="war">Warrior</td>
+          <td class="war">Protection</td>
           <td class="horde">Troll</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td><s>Novamage</s></td>
-          <td>Mage</td>
-          <td>Frost</td>
+          <td class="ma"><s>Novamage</s></td>
+          <td class="ma">Mage</td>
+          <td class="ma">Frost</td>
           <td class="alliance">Gnome</td>
           <td>6</td>
           <td class="dead"><A target="_blank" href="https://youtu.be/qXnEcdlJcUQ">Dead</A></td>
           <td>Wendigo - Level 7</td>
+        </tr>
+        <tr>
+          <td class="ma"><s>Novamage</s></td>
+          <td class="ma">Mage</td>
+          <td class="ma">Frost</td>
+          <td class="alliance">Gnome</td>
+          <td>12</td>
+          <td class="dead"><A target="_blank" href="https://youtu.be/ecpDMYa-4TU">Dead</A></td>
+          <td>Wetlands Crocolisk - 💀</td>
         </tr>
       </tbody>
     </table>
@@ -164,77 +252,84 @@
           <th>Status</th>
           <th>Time / Killer</th>
         </tr>
+      </thead>
         <tr>
-          <td>Novapriest</td>
-          <td>Priest</td>
+          <td class="pr">Novapriest</td>
+          <td class="pr">Priest</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaMage</td>
-          <td>Mage</td>
+          <td class="ma">NovaMage</td>
+          <td class="ma">Mage</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 2h 40m</td>
         </tr>
         <tr>
-          <td>NovaSham</td>
-          <td>Shaman</td>
+          <td class="sh">NovaSham</td>
+          <td class="sh">Shaman</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaDruid</td>
-          <td>Druid</td>
+          <td class="dr">NovaDruid</td>
+          <td class="dr">Druid</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaHunter</td>
-          <td>Hunter</td>
+          <td class="hu">NovaHunter</td>
+          <td class="hu">Hunter</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaPala</td>
-          <td>Paladin</td>
+          <td class="pa">NovaPala</td>
+          <td class="pa">Paladin</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaRogue</td>
-          <td>Rogue</td>
+          <td class="ro">NovaRogue</td>
+          <td class="ro">Rogue</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaLock</td>
-          <td>Warlock</td>
+          <td class="wa">NovaLock</td>
+          <td class="wa">Warlock</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td>NovaWar</td>
-          <td>Warrior</td>
+          <td class="war">NovaWar</td>
+          <td class="war">Warrior</td>
           <td>1</td>
           <td class="alive">Alive</td>
           <td>0d 0h 0m</td>
         </tr>
         <tr>
-          <td><s>Novamage</s></td>
-          <td>Mage</td>
+          <td class="ma"><s>Novamage</s></td>
+          <td class="ma">Mage</td>
           <td>6</td>
           <td class="dead"><A target="_blank" href="https://youtu.be/qXnEcdlJcUQ">Dead</A></td>
           <td>Wendigo - Level 7</td>
         </tr>
-      </thead>
+        <tr>
+          <td class="ma"><s>Novamage</s></td>
+          <td class="ma">Mage</td>
+          <td>12</td>
+          <td class="dead"><A target="_blank" href="https://youtu.be/ecpDMYa-4TU">Dead</A></td>
+          <td>Wetlands Crocolisk - 💀</td>
+        </tr>
     </table>
     <h1>Duo</h1>
     <table class="desktop-table-duo">
@@ -251,13 +346,13 @@
       </thead>
       <tbody>
         <tr>
-          <td>Novawulf</td>
-          <td>Druid</td>
-          <td>Feral</td>
+          <td class="dr">Novawulf</td>
+          <td class="dr">Druid</td>
+          <td class="dr">Feral</td>
           <td class="alliance">Night Elf</td>
-          <td>15</td>
+          <td>20</td>
           <td class="alive">Alive</td>
-          <td>0d 9h 30m</td>
+          <td>0d 17h 30m</td>
         </tr>
       </tbody>
     </table>
@@ -270,14 +365,14 @@
           <th>Status</th>
           <th>Time / Killer</th>
         </tr>
-        <tr>
-          <td>Novawulf</td>
-          <td>Druid</td>
-          <td>9</td>
-          <td class="alive">Alive</td>
-          <td>0d 9h 30m</td>
-        </tr>
       </thead>
+        <tr>
+          <td class="dr">Novawulf</td>
+          <td class="dr">Druid</td>
+          <td>20</td>
+          <td class="alive">Alive</td>
+          <td>0d 17h 30m</td>
+        </tr>
     </table>
   </div>
 
