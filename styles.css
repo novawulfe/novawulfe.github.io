@@ -142,6 +142,8 @@ img.utubeicon{
   max-height:50px;
 }
 
+#video-container .row{margin:15px 0 15px 0;}
+#video-container .col{text-align:center;margin-left:auto;margin-right:auto;margin-bottom:8px;}
 
 .footer .col img{
   max-height:150px;
